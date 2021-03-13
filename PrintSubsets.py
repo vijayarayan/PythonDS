@@ -35,11 +35,11 @@ def getSubsets(nums, i, res):
         ret = copy.deepcopy(res)
         all1.append(ret)
         return
+
     #exclude
     getSubsets(nums, i+1, res)
-       
-    ret = res.append(nums[i])
-    #include
+    #include   
+    res.append(nums[i])
     getSubsets(nums, i+1, res)
     del(res[-1])
     
@@ -53,7 +53,6 @@ def main():
     print(all1)
     
 main()
-
 
 # In[ ]:
 
